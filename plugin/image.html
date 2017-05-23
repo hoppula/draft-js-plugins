@@ -1,0 +1,381 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="draft-js-plugins - High quality plugins for DraftJS with great UX" />
+<meta property="og:description" content="Facebook's rich-text editor framework DraftJS built on top of React allows you to create powerful editors. We built a plugin architecture on top of it that aims to provide you with plug & play extensions. It comes with a set of plugins with great UX serving mobile & desktop as well as screen-readers. You can combine them in any way you want to or build your own." />
+<meta property="og:url" content="https://www.draft-js-plugins.com" />
+<meta property="og:site_name" content="draft-js-plugins" />
+<meta property="og:image" content="https://www.draft-js-plugins.com/images/draft-js-plugins.png" />
+<title>DraftJS Plugins - High quality plugins with great UX</title>
+<script>
+  if (window.location.href.indexOf('draft-js-plugins.github.io/draft-js-plugins') !== -1) {
+    // TODO improve redirect to redirect with the proper path
+    window.location.href = 'https://www.draft-js-plugins.com/';
+  }
+</script>
+<link rel="stylesheet" href="/css/normalize.css"/>
+<link rel="stylesheet" href="/css/base.css"/>
+<link rel="stylesheet" href="/css/Draft.css"/>
+<link rel="stylesheet" href="/app.css"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css"/>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css" /></head><body><div id="root"><div data-reactroot="" data-reactid="1" data-react-checksum="-2042778306"><div data-reactid="2"><div data-reactid="3"><div class="pluginsWrapper___3HNqa" data-reactid="4"><div class="wideContainer___2PUk8" data-reactid="5"><ul class="plugins___2Zxyu" data-reactid="6"><li class="plugin___1CqHF" data-reactid="7"><a class="link___3-bgR" href="/plugin/mention" data-reactid="8">Mention</a></li><li class="plugin___1CqHF" data-reactid="9"><a class="link___3-bgR" href="/plugin/emoji" data-reactid="10">Emoji</a></li><li class="plugin___1CqHF" data-reactid="11"><a class="link___3-bgR" href="/plugin/image" data-reactid="12">Image</a></li><li class="plugin___1CqHF" data-reactid="13"><a class="link___3-bgR" href="/plugin/video" data-reactid="14">Video</a></li><li class="plugin___1CqHF" data-reactid="15"><a class="link___3-bgR" href="/plugin/sticker" data-reactid="16">Sticker</a></li></ul><ul class="plugins___2Zxyu" data-reactid="17"><li class="plugin___1CqHF" data-reactid="18"><a class="link___3-bgR" href="/plugin/hashtag" data-reactid="19">Hashtag</a></li><li class="plugin___1CqHF" data-reactid="20"><a class="link___3-bgR" href="/plugin/inline-toolbar" data-reactid="21">Inline Toolbar</a></li><li class="plugin___1CqHF" data-reactid="22"><a class="link___3-bgR" href="/plugin/side-toolbar" data-reactid="23">Side Toolbar</a></li><li class="plugin___1CqHF" data-reactid="24"><a class="link___3-bgR" href="/plugin/undo" data-reactid="25">Undo</a></li><li class="plugin___1CqHF" data-reactid="26"><a class="link___3-bgR" href="/plugin/counter" data-reactid="27">Counter</a></li></ul><ul class="plugins___2Zxyu" data-reactid="28"><li class="plugin___1CqHF" data-reactid="29"><a class="link___3-bgR" href="/plugin/linkify" data-reactid="30">Linkify</a></li><li class="plugin___1CqHF" data-reactid="31"><a class="link___3-bgR" href="/plugin/focus" data-reactid="32">Focus</a></li><li class="plugin___1CqHF" data-reactid="33"><a class="link___3-bgR" href="/plugin/alignment" data-reactid="34">Alignment</a></li><li class="plugin___1CqHF" data-reactid="35"><a class="link___3-bgR" href="/plugin/resizeable" data-reactid="36">Resizeable</a></li><li class="plugin___1CqHF" data-reactid="37"><a class="link___3-bgR" href="/plugin/drag-n-drop" data-reactid="38">Drag&#x27;n&#x27;Drop</a></li></ul></div><div style="text-align:center;margin-top:3rem;font-size:13px;color:#aaa;" data-reactid="39">The documentation currently represents the 2.0.0-rc1 release.</div></div><div class="root___2951M" data-reactid="40"><div class="separatorBase___3ePf_" data-reactid="41"></div><div class="separatorBase___3ePf_" data-reactid="42"></div><div class="separatorBase___3ePf_" data-reactid="43"></div><div class="separatorBase___3ePf_" data-reactid="44"></div><div class="separatorBase___3ePf_" data-reactid="45"></div><div class="separatorBase___3ePf_" data-reactid="46"></div></div><div class="root___1BwYz" data-reactid="47"><div class="root___LJuK8" data-reactid="48"><h2 class="level2___ZSTcp" data-reactid="49">Image</h2><h2 class="level3___3tmSS" data-reactid="50">Supported Environment</h2><ul class="list___ISuN4" data-reactid="51"><li class="listEntry___1QrC1" data-reactid="52">Desktop: Yes</li><li class="listEntry___1QrC1" data-reactid="53">Mobile: Yes</li><li class="listEntry___1QrC1" data-reactid="54">Screen-reader: No</li></ul></div></div><div class="root___3jr4h" data-reactid="55"><div class="root___LJuK8" data-reactid="56"><h2 class="level2___ZSTcp" data-reactid="57">Getting Started</h2><div class="root___-TPfX" data-reactid="58"><div class="hiddenName___1Ie0V" data-reactid="59"></div><pre data-reactid="60"><code data-reactid="61">npm install draft-js-plugins-editor@beta --save</code></pre></div><div class="root___-TPfX" data-reactid="62"><div class="hiddenName___1Ie0V" data-reactid="63"></div><pre data-reactid="64"><code data-reactid="65">npm install draft-js-image-plugin@beta --save</code></pre></div><div class="root___-TPfX" data-reactid="66"><div class="name___9uJGf" data-reactid="67">gettingStarted.js</div><pre data-reactid="68"><code data-reactid="69"><span class="token comment" spellcheck="true">// It is important to import the Editor which accepts plugins.</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> Editor <span class="token keyword">from</span> <span class="token string">'draft-js-plugins-editor'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createImagePlugin <span class="token keyword">from</span> <span class="token string">'draft-js-image-plugin'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> imagePlugin <span class="token operator">=</span> <span class="token function">createImagePlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// The Editor accepts an array of plugins. In this case, only the imagePlugin</span>
+<span class="token comment" spellcheck="true">// is passed in, although it is possible to pass in multiple plugins.</span>
+<span class="token keyword">const</span> MyEditor <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> editorState<span class="token punctuation">,</span> onChange <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>Editor
+    editorState<span class="token operator">=</span><span class="token punctuation">{</span>editorState<span class="token punctuation">}</span>
+    onChange<span class="token operator">=</span><span class="token punctuation">{</span>onChange<span class="token punctuation">}</span>
+    plugins<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>imagePlugin<span class="token punctuation">]</span><span class="token punctuation">}</span>
+  <span class="token operator">/</span><span class="token operator">></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> MyEditor<span class="token punctuation">;</span>
+</code></pre></div><h2 class="level3___3tmSS" data-reactid="70">Importing the default styles</h2><p data-reactid="71"><!-- react-text: 72 -->The plugin ships with a default styling available at this location in the installed package:  <!-- /react-text --><span class="root___1V--j" data-reactid="73"><code data-reactid="74">node_modules/draft-js-image-plugin/lib/plugin.css</code></span></p><h2 class="level4___217Mp" data-reactid="75">Webpack Usage</h2><ul class="list___ISuN4" data-reactid="76"><li class="listEntry___1QrC1" data-reactid="77"><!-- react-text: 78 -->1. Install Webpack loaders:  <!-- /react-text --><span class="root___1V--j" data-reactid="79"><code data-reactid="80">npm i style-loader css-loader --save-dev</code></span></li><li class="listEntry___1QrC1" data-reactid="81"><!-- react-text: 82 -->2. Add the below section to Webpack config (if your config already has a loaders array, simply add the below loader object to your existing list.<!-- /react-text --><div class="root___-TPfX guideCodeBlock___3NDUs" data-reactid="83"><div class="hiddenName___1Ie0V" data-reactid="84"></div><pre data-reactid="85"><code data-reactid="86">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    loaders<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token punctuation">:</span> <span class="token regex">/plugin\.css$/</span><span class="token punctuation">,</span>
+        loaders<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+          <span class="token string">'style'</span><span class="token punctuation">,</span> <span class="token string">'css'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></li><li class="listEntry___1QrC1" data-reactid="87"><!-- react-text: 88 -->3. Add the below import line to your component to tell Webpack to inject the style to your component.<!-- /react-text --><div class="root___-TPfX guideCodeBlock___3NDUs" data-reactid="89"><div class="hiddenName___1Ie0V" data-reactid="90"></div><pre data-reactid="91"><code data-reactid="92"><span class="token keyword">import</span> <span class="token string">'draft-js-image-plugin/lib/plugin.css'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// eslint-disable-line import/no-unresolved</span>
+</code></pre></div></li><li class="listEntry___1QrC1" data-reactid="93">4. Restart Webpack.</li></ul><h2 class="level4___217Mp" data-reactid="94">Browserify Usage</h2><p data-reactid="95"><!-- react-text: 96 -->Please help, by submiting a Pull Request to the <!-- /react-text --><a href="https://github.com/draft-js-plugins/draft-js-plugins/blob/master/docs/client/components/pages/Image/index.js" class="root___3AHDO" data-reactid="97">documentation</a><!-- react-text: 98 -->.<!-- /react-text --></p></div></div><div class="root___1BwYz" data-reactid="99"><div class="root___LJuK8" data-reactid="100"><h2 class="level2___ZSTcp" data-reactid="101">Configuration Parameters</h2><div class="param___3i4Td" data-reactid="102"><span class="paramName___2V01j" data-reactid="103">theme</span><span data-reactid="104">Object of CSS classes with the following keys.</span><div class="subParams___24xVU" data-reactid="105"><div class="subParam___Qjher" data-reactid="106"><span class="subParamName___1Npbj" data-reactid="107">image:</span><!-- react-text: 108 --> CSS class for the image.<!-- /react-text --></div><div class="subParam___Qjher" data-reactid="109"><span class="subParamName___1Npbj" data-reactid="110">addImage:</span><!-- react-text: 111 --> CSS class.<!-- /react-text --></div><div class="subParam___Qjher" data-reactid="112"><span class="subParamName___1Npbj" data-reactid="113">addImagePopover:</span><!-- react-text: 114 --> CSS class.<!-- /react-text --></div><div class="subParam___Qjher" data-reactid="115"><span class="subParamName___1Npbj" data-reactid="116">addImageClosedPopover:</span><!-- react-text: 117 --> CSS class.<!-- /react-text --></div><div class="subParam___Qjher" data-reactid="118"><span class="subParamName___1Npbj" data-reactid="119">addImageBottomGradient:</span><!-- react-text: 120 --> CSS class.<!-- /react-text --></div><div class="subParam___Qjher" data-reactid="121"><span class="subParamName___1Npbj" data-reactid="122">addImageButton:</span><!-- react-text: 123 --> CSS class.<!-- /react-text --></div><div class="subParam___Qjher" data-reactid="124"><span class="subParamName___1Npbj" data-reactid="125">addImagePressedButton:</span><!-- react-text: 126 --> CSS class.<!-- /react-text --></div><div class="subParam___Qjher" data-reactid="127"><span class="subParamName___1Npbj" data-reactid="128">addImageInput:</span><!-- react-text: 129 --> CSS class.<!-- /react-text --></div><div class="subParam___Qjher" data-reactid="130"><span class="subParamName___1Npbj" data-reactid="131">addImageConfirmButton:</span><!-- react-text: 132 --> CSS class.<!-- /react-text --></div></div></div><div class="paramBig___lIqOq" data-reactid="133"><span class="paramName___2V01j" data-reactid="134">imageComponent</span><span data-reactid="135">Pass in a custom image component to be rendered.</span></div><div class="paramBig___lIqOq" data-reactid="136"><span class="paramName___2V01j" data-reactid="137">addImageButtonContent</span><span data-reactid="138">Content of button which opens add image popup. (Default content is 📷)</span></div></div></div><div class="root___1BwYz" data-reactid="139"><div class="root___LJuK8" data-reactid="140"><h2 class="level2___ZSTcp" data-reactid="141">Simple Example</h2><div data-reactid="142"><div class="editor___1478I" data-reactid="143"><div class="DraftEditor-root" data-reactid="144"><div class="DraftEditor-editorContainer" data-reactid="145"><div class="notranslate public-DraftEditor-content" contenteditable="true" role="textbox" spellcheck="false" style="outline:none;white-space:pre-wrap;word-wrap:break-word;" data-reactid="146"><div data-contents="true" data-reactid="147"><div class="" data-block="true" data-editor="eqg4r" data-offset-key="9gm3s-0-0" data-reactid="148"><div data-offset-key="9gm3s-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-reactid="149"><span data-offset-key="9gm3s-0-0" data-reactid="150"><span data-text="true" data-reactid="151">You can have images in your text field. This is a very rudimentary example, but you can enhance the image plugin with resizing, focus or alignment plugins.</span></span></div></div><figure class="" data-block="true" data-editor="eqg4r" data-offset-key="ov7r-0-0" contenteditable="false" data-reactid="152"><img direction="LTR" src="/images/canada-landscape-small.jpg" role="presentation" class="image___1e-Z1" data-reactid="153"/></figure><div class="" data-block="true" data-editor="eqg4r" data-offset-key="e23a8-0-0" data-reactid="154"><div data-offset-key="e23a8-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-reactid="155"><span data-offset-key="e23a8-0-0" data-reactid="156"><span data-text="true" data-reactid="157">See advanced examples further down …</span></span></div></div></div></div></div></div></div></div><div class="root___-TPfX" data-reactid="158"><div class="name___9uJGf" data-reactid="159">SimpleImageEditor.js</div><pre data-reactid="160"><code data-reactid="161"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  convertFromRaw<span class="token punctuation">,</span>
+  EditorState<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> Editor <span class="token keyword">from</span> <span class="token string">'draft-js-plugins-editor'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createImagePlugin <span class="token keyword">from</span> <span class="token string">'draft-js-image-plugin'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> editorStyles <span class="token keyword">from</span> <span class="token string">'./editorStyles.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> imagePlugin <span class="token operator">=</span> <span class="token function">createImagePlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> plugins <span class="token operator">=</span> <span class="token punctuation">[</span>imagePlugin<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* eslint-disable */</span>
+<span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">"entityMap"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"0"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image"</span><span class="token punctuation">,</span>
+            <span class="token string">"mutability"</span><span class="token punctuation">:</span> <span class="token string">"IMMUTABLE"</span><span class="token punctuation">,</span>
+            <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/canada-landscape-small.jpg"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"blocks"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token string">"9gm3s"</span><span class="token punctuation">,</span>
+        <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">"You can have images in your text field. This is a very rudimentary example, but you can enhance the image plugin with resizing, focus or alignment plugins."</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"unstyled"</span><span class="token punctuation">,</span>
+        <span class="token string">"depth"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token string">"inlineStyleRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"entityRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token string">"ov7r"</span><span class="token punctuation">,</span>
+        <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"atomic"</span><span class="token punctuation">,</span>
+        <span class="token string">"depth"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token string">"inlineStyleRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"entityRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token string">"offset"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token string">"length"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token string">"e23a8"</span><span class="token punctuation">,</span>
+        <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">"See advanced examples further down …"</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"unstyled"</span><span class="token punctuation">,</span>
+        <span class="token string">"depth"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token string">"inlineStyleRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"entityRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* eslint-enable */</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">SimpleImageEditor</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    editorState<span class="token punctuation">:</span> EditorState<span class="token punctuation">.</span><span class="token function">createWithContent</span><span class="token punctuation">(</span><span class="token function">convertFromRaw</span><span class="token punctuation">(</span>initialState<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  onChange <span class="token operator">=</span> <span class="token punctuation">(</span>editorState<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      editorState<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  focus <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>editor<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>editorStyles<span class="token punctuation">.</span>editor<span class="token punctuation">}</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>focus<span class="token punctuation">}</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Editor
+            editorState<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>editorState<span class="token punctuation">}</span>
+            onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onChange<span class="token punctuation">}</span>
+            plugins<span class="token operator">=</span><span class="token punctuation">{</span>plugins<span class="token punctuation">}</span>
+            ref<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>editor <span class="token operator">=</span> element<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="root___-TPfX" data-reactid="162"><div class="name___9uJGf" data-reactid="163">editorStyles.css</div><pre data-reactid="164"><code data-reactid="165"><span class="token selector">.editor</span> <span class="token punctuation">{</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ddd<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> text<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px 1px 8px -3px #ABABAB<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #fefefe<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.editor :global(.public-DraftEditor-content)</span> <span class="token punctuation">{</span>
+  <span class="token property">min-height</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.options</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><div class="root___1BwYz" data-reactid="166"><div class="root___LJuK8" data-reactid="167"><h2 class="level2___ZSTcp" data-reactid="168">Alignment + Resize + Focus + Drag&#x27;n&#x27;Drop + Drag&#x27;n&#x27;Drop Upload Example</h2><div data-reactid="169"><div class="editor___1JzNA" data-reactid="170"><div class="DraftEditor-root" data-reactid="171"><div class="DraftEditor-editorContainer" data-reactid="172"><div class="notranslate public-DraftEditor-content" contenteditable="true" role="textbox" spellcheck="false" style="outline:none;white-space:pre-wrap;word-wrap:break-word;" data-reactid="173"><div data-contents="true" data-reactid="174"><div class="" data-block="true" data-editor="bjr97" data-offset-key="9gm3s-0-0" data-reactid="175"><div data-offset-key="9gm3s-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-reactid="176"><span data-offset-key="9gm3s-0-0" data-reactid="177"><span data-text="true" data-reactid="178">You can have images in your text field. This is a very rudimentary example, but you can enhance the image plugin with resizing, focus or alignment plugins.</span></span></div></div><figure class="" data-block="true" data-editor="bjr97" data-offset-key="ov7r-0-0" contenteditable="false" data-reactid="179"><img direction="LTR" style="position:relative;width:40%;cursor:default;" src="/images/canada-landscape-small.jpg" role="presentation" class="image___1e-Z1 unfocused___2r0W6" data-reactid="180"/></figure><div class="" data-block="true" data-editor="bjr97" data-offset-key="e23a8-0-0" data-reactid="181"><div data-offset-key="e23a8-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-reactid="182"><span data-offset-key="e23a8-0-0" data-reactid="183"><span data-text="true" data-reactid="184">See advanced examples further down …</span></span></div></div></div></div></div></div><div class="alignmentTool___3KZQG" data-reactid="185"><div class="buttonWrapper___3fLZF" data-reactid="186"><button class="button___1tM1C" type="button" data-reactid="187"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" data-reactid="188"><path d="M3,21 L21,21 L21,19 L3,19 L3,21 Z M3,3 L3,5 L21,5 L21,3 L3,3 Z M3,7 L3,17 L17,17 L17,7 L3,7 Z" data-reactid="189"></path><path d="M0 0h24v24H0z" fill="none" data-reactid="190"></path></svg></button></div><div class="buttonWrapper___3fLZF" data-reactid="191"><button class="button___1tM1C" type="button" data-reactid="192"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" data-reactid="193"><path d="M21,15 L15,15 L15,17 L21,17 L21,15 Z M21,7 L15,7 L15,9 L21,9 L21,7 Z M15,13 L21,13 L21,11 L15,11 L15,13 Z M3,21 L21,21 L21,19 L3,19 L3,21 Z M3,3 L3,5 L21,5 L21,3 L3,3 Z M3,7 L3,17 L13,17 L13,7 L3,7 Z" data-reactid="194"></path><path d="M0 0h24v24H0z" fill="none" data-reactid="195"></path></svg></button></div><div class="buttonWrapper___3fLZF" data-reactid="196"><button class="button___1tM1C" type="button" data-reactid="197"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" data-reactid="198"><path d="M3,21 L21,21 L21,19 L3,19 L3,21 Z M3,3 L3,5 L21,5 L21,3 L3,3 Z M5,7 L5,17 L19,17 L19,7 L5,7 Z" data-reactid="199"></path><path d="M0 0h24v24H0z" fill="none" data-reactid="200"></path></svg></button></div><div class="buttonWrapper___3fLZF" data-reactid="201"><button class="button___1tM1C" type="button" data-reactid="202"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" data-reactid="203"><path d="M9,15 L3,15 L3,17 L9,17 L9,15 Z M9,7 L3,7 L3,9 L9,9 L9,7 Z M3,13 L9,13 L9,11 L3,11 L3,13 Z M3,21 L21,21 L21,19 L3,19 L3,21 Z M3,3 L3,5 L21,5 L21,3 L3,3 Z M11,7 L11,17 L21,17 L21,7 L11,7 Z" data-reactid="204"></path><path d="M0 0h24v24H0z" fill="none" data-reactid="205"></path></svg></button></div></div></div></div><div class="root___-TPfX" data-reactid="206"><div class="name___9uJGf" data-reactid="207">AddImageEditor.js</div><pre data-reactid="208"><code data-reactid="209"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  convertFromRaw<span class="token punctuation">,</span>
+  EditorState<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> Editor<span class="token punctuation">,</span> <span class="token punctuation">{</span> composeDecorators <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js-plugins-editor'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createImagePlugin <span class="token keyword">from</span> <span class="token string">'draft-js-image-plugin'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createAlignmentPlugin <span class="token keyword">from</span> <span class="token string">'draft-js-alignment-plugin'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createFocusPlugin <span class="token keyword">from</span> <span class="token string">'draft-js-focus-plugin'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createResizeablePlugin <span class="token keyword">from</span> <span class="token string">'draft-js-resizeable-plugin'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createBlockDndPlugin <span class="token keyword">from</span> <span class="token string">'draft-js-drag-n-drop-plugin'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createDragNDropUploadPlugin <span class="token keyword">from</span> <span class="token string">'draft-js-drag-n-drop-upload-plugin'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> editorStyles <span class="token keyword">from</span> <span class="token string">'./editorStyles.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> mockUpload <span class="token keyword">from</span> <span class="token string">'./mockUpload'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> focusPlugin <span class="token operator">=</span> <span class="token function">createFocusPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> resizeablePlugin <span class="token operator">=</span> <span class="token function">createResizeablePlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> blockDndPlugin <span class="token operator">=</span> <span class="token function">createBlockDndPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> alignmentPlugin <span class="token operator">=</span> <span class="token function">createAlignmentPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> AlignmentTool <span class="token punctuation">}</span> <span class="token operator">=</span> alignmentPlugin<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> decorator <span class="token operator">=</span> <span class="token function">composeDecorators</span><span class="token punctuation">(</span>
+  resizeablePlugin<span class="token punctuation">.</span>decorator<span class="token punctuation">,</span>
+  alignmentPlugin<span class="token punctuation">.</span>decorator<span class="token punctuation">,</span>
+  focusPlugin<span class="token punctuation">.</span>decorator<span class="token punctuation">,</span>
+  blockDndPlugin<span class="token punctuation">.</span>decorator
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> imagePlugin <span class="token operator">=</span> <span class="token function">createImagePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span> decorator <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> dragNDropFileUploadPlugin <span class="token operator">=</span> <span class="token function">createDragNDropUploadPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  handleUpload<span class="token punctuation">:</span> mockUpload<span class="token punctuation">,</span>
+  addImage<span class="token punctuation">:</span> imagePlugin<span class="token punctuation">.</span>addImage<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> plugins <span class="token operator">=</span> <span class="token punctuation">[</span>
+  dragNDropFileUploadPlugin<span class="token punctuation">,</span>
+  blockDndPlugin<span class="token punctuation">,</span>
+  focusPlugin<span class="token punctuation">,</span>
+  alignmentPlugin<span class="token punctuation">,</span>
+  resizeablePlugin<span class="token punctuation">,</span>
+  imagePlugin
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">/* eslint-disable */</span>
+<span class="token keyword">const</span> initialState <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">"entityMap"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"0"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"image"</span><span class="token punctuation">,</span>
+            <span class="token string">"mutability"</span><span class="token punctuation">:</span> <span class="token string">"IMMUTABLE"</span><span class="token punctuation">,</span>
+            <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                <span class="token string">"src"</span><span class="token punctuation">:</span> <span class="token string">"/images/canada-landscape-small.jpg"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"blocks"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token string">"9gm3s"</span><span class="token punctuation">,</span>
+        <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">"You can have images in your text field. This is a very rudimentary example, but you can enhance the image plugin with resizing, focus or alignment plugins."</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"unstyled"</span><span class="token punctuation">,</span>
+        <span class="token string">"depth"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token string">"inlineStyleRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"entityRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token string">"ov7r"</span><span class="token punctuation">,</span>
+        <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">" "</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"atomic"</span><span class="token punctuation">,</span>
+        <span class="token string">"depth"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token string">"inlineStyleRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"entityRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token string">"offset"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            <span class="token string">"length"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+            <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token string">"e23a8"</span><span class="token punctuation">,</span>
+        <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token string">"See advanced examples further down …"</span><span class="token punctuation">,</span>
+        <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"unstyled"</span><span class="token punctuation">,</span>
+        <span class="token string">"depth"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token string">"inlineStyleRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"entityRanges"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token string">"data"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">/* eslint-enable */</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">CustomImageEditor</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    editorState<span class="token punctuation">:</span> EditorState<span class="token punctuation">.</span><span class="token function">createWithContent</span><span class="token punctuation">(</span><span class="token function">convertFromRaw</span><span class="token punctuation">(</span>initialState<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  onChange <span class="token operator">=</span> <span class="token punctuation">(</span>editorState<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      editorState<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  focus <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>editor<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>editorStyles<span class="token punctuation">.</span>editor<span class="token punctuation">}</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>focus<span class="token punctuation">}</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Editor
+            editorState<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>editorState<span class="token punctuation">}</span>
+            onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onChange<span class="token punctuation">}</span>
+            plugins<span class="token operator">=</span><span class="token punctuation">{</span>plugins<span class="token punctuation">}</span>
+            ref<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>editor <span class="token operator">=</span> element<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token operator">/</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>AlignmentTool <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="root___-TPfX" data-reactid="210"><div class="name___9uJGf" data-reactid="211">editorStyles.css</div><pre data-reactid="212"><code data-reactid="213"><span class="token selector">.editor</span> <span class="token punctuation">{</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ddd<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> text<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px 1px 8px -3px #ABABAB<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #fefefe<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.editor :global(.public-DraftEditor-content)</span> <span class="token punctuation">{</span>
+  <span class="token property">min-height</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.options</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><div class="root___1BwYz" data-reactid="214"><div class="root___LJuK8" data-reactid="215"><h2 class="level2___ZSTcp" data-reactid="216">Add Image Button Example</h2><div data-reactid="217"><div class="editor___2sUgl" data-reactid="218"><div class="DraftEditor-root" data-reactid="219"><div class="DraftEditor-editorContainer" data-reactid="220"><div class="notranslate public-DraftEditor-content" contenteditable="true" role="textbox" spellcheck="false" style="outline:none;white-space:pre-wrap;word-wrap:break-word;" data-reactid="221"><div data-contents="true" data-reactid="222"><div class="" data-block="true" data-editor="6pvki" data-offset-key="88v6a-0-0" data-reactid="223"><div data-offset-key="88v6a-0-0" class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr" data-reactid="224"><span data-offset-key="88v6a-0-0" data-reactid="225"><span data-text="true" data-reactid="226">Click on the + button below and insert &quot;/images/canada-landscape-small.jpg&quot; to add the landscape image. Alternativly you can use any image url on the web.</span></span></div></div></div></div></div></div></div><div class="addImage___3dznP" data-reactid="227"><button class="addImageButton___2YDnZ" type="button" data-reactid="228">+</button><div class="addImageClosedPopover___JDDT9" data-reactid="229"><input type="text" placeholder="Paste the image url …" class="addImageInput___1eCoD" value="" data-reactid="230"/><button class="addImageConfirmButton___yNeoX" type="button" data-reactid="231">Add</button></div></div></div><div class="root___-TPfX" data-reactid="232"><div class="name___9uJGf" data-reactid="233">AddImageEditor.js</div><pre data-reactid="234"><code data-reactid="235"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> Editor<span class="token punctuation">,</span> <span class="token punctuation">{</span> createEditorStateWithText <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'draft-js-plugins-editor'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> createImagePlugin <span class="token keyword">from</span> <span class="token string">'draft-js-image-plugin'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ImageAdd <span class="token keyword">from</span> <span class="token string">'./ImageAdd'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// eslint-disable-next-line import/no-unresolved</span>
+<span class="token keyword">import</span> editorStyles <span class="token keyword">from</span> <span class="token string">'./editorStyles.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> imagePlugin <span class="token operator">=</span> <span class="token function">createImagePlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> plugins <span class="token operator">=</span> <span class="token punctuation">[</span>imagePlugin<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> text <span class="token operator">=</span> <span class="token string">'Click on the + button below and insert "/images/canada-landscape-small.jpg" to add the landscape image. Alternativly you can use any image url on the web.'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">CustomImageEditor</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    editorState<span class="token punctuation">:</span> <span class="token function">createEditorStateWithText</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  onChange <span class="token operator">=</span> <span class="token punctuation">(</span>editorState<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      editorState<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  focus <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>editor<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>editorStyles<span class="token punctuation">.</span>editor<span class="token punctuation">}</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>focus<span class="token punctuation">}</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>Editor
+            editorState<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>editorState<span class="token punctuation">}</span>
+            onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onChange<span class="token punctuation">}</span>
+            plugins<span class="token operator">=</span><span class="token punctuation">{</span>plugins<span class="token punctuation">}</span>
+            ref<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span>editor <span class="token operator">=</span> element<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>ImageAdd
+          editorState<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>editorState<span class="token punctuation">}</span>
+          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onChange<span class="token punctuation">}</span>
+          modifier<span class="token operator">=</span><span class="token punctuation">{</span>imagePlugin<span class="token punctuation">.</span>addImage<span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="root___-TPfX" data-reactid="236"><div class="name___9uJGf" data-reactid="237">editorStyles.css</div><pre data-reactid="238"><code data-reactid="239"><span class="token selector">.editor</span> <span class="token punctuation">{</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ddd<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> text<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 2em<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px 1px 8px -3px #ABABAB<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> #fefefe<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.editor :global(.public-DraftEditor-content)</span> <span class="token punctuation">{</span>
+  <span class="token property">min-height</span><span class="token punctuation">:</span> 140px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.options</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><div class="root___288m_" data-reactid="240"><div class="githubButtonWrapper___f8mkg" data-reactid="241"><a class="github-button" href="https://github.com/draft-js-plugins/draft-js-plugins" data-style="mega" data-count-href="/draft-js-plugins/draft-js-plugins/stargazers" data-count-api="/repos/draft-js-plugins/draft-js-plugins#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star draft-js-plugins/draft-js-plugins on GitHub" data-reactid="242">Github</a></div><div class="twitterButtonWrapper___37ybj" data-reactid="243"><span data-reactid="244"></span></div><div class="facebookButtonWrapper___3Op0o" data-reactid="245"><div id="fbbutton" class="fb-like" data-href="https://www.draft-js-plugins.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-width="290" data-reactid="246"></div></div></div></div></div><footer class="footer___3c9ZC" data-reactid="247"><!-- react-text: 248 -->Built with <!-- /react-text --><span class="heart___3qO39" data-reactid="249">❤</span><!-- react-text: 250 --> on Planet Earth<!-- /react-text --><div class="emojiAttribution___3XF0y" data-reactid="251"><!-- react-text: 252 -->Emoji art provided free by <!-- /react-text --><a href="http://emojione.com/" class="root___3AHDO" data-reactid="253">Emoji One</a></div></footer></div></div><script src="/app.js"></script><span><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-75176147-1', 'auto');
+  ga('send', 'pageview');
+</script></span></body></html>
